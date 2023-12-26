@@ -7,7 +7,7 @@
   
   body {
     /* background-color: #d3d3d3; */
-    background-image: url('**/images/bg.png');
+    background-image: url('../images/bg.jpg');
     background-size: cover; /* This property ensures the image covers the entire body */
     background-position: center;
     background-attachment: fixed; /* Set the background position as fixed */
@@ -23,7 +23,7 @@
   
   /*NAVBAR*/
   .navbar {
-    background-color: red;
+    background-color: blue;
     overflow: hidden;
     text-align: center;
     position: sticky;
@@ -59,7 +59,7 @@
     position: fixed;
     height: 20vh;
     width: 100%;
-    background-color: red;
+    background-color: blue;
     color: white;
     bottom: 0;
     text-align: center;
