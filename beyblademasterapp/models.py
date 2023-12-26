@@ -91,9 +91,6 @@ class Beyblade(BaseModel):
     
     def __str__(self):
         return " ".join([self.fusionWheel, self.faceBolt])
-    
-
-    
 
 class Collection(BaseModel):
     beyblade = models.ForeignKey(Beyblade, blank=True, null=True, on_delete=models.CASCADE)
