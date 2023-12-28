@@ -20,7 +20,7 @@ class BeybladeAdmin(admin.ModelAdmin):
 
 @admin.register(Player)
 class BeybladeAdmin(admin.ModelAdmin):
-    list_display = ("mentor", "firstName", "lastName", "birthdate","homeTown", "homeCountry", "email")
+    list_display = ("mentor", "firstName", "lastName", "birthdate","homeTown", "homeCountry", "email", "curAddr")
     search_fields = ("firstName", )
 
 @admin.register(Collection)

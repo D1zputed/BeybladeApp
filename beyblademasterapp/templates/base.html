@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="{% static 'css/style.css'%}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
-    <title>{% block title %} CardQuest Master {% endblock %}</title>
+    <title>{% block title %} Beyblade Quest {% endblock %}</title>
   </head>
   <body>
     <!--NAVBAR-->
     <section class="navbar">
       <a href="{% url 'home' %}" class="btn" id="active"> Home </a>
-      <a href="#" class="btn"> Player </a>
+      <a href="{% url 'player-list' %}" class="btn"> Player </a>
       <a href="#" class="btn"> Beyblade </a>
       <a href="#" class="btn"> Mentor </a>
       <a href="#" class="btn"> Collection </a>
+      <a href="#" class="btn"> Addresses </a>
     </section>
 
     <!--CONTENT-->

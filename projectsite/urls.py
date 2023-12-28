@@ -21,4 +21,7 @@ from beyblademasterapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view(), name='home'),
+    path('player_list', PlayerListView.as_view(), name='player-list'),
+    path('player_list/add', PlayerCreateView.as_view(), name='player-add'),
+    path('player_list/<pk>', PlayerUpdateView.as_view(), name='player-update')
 ]

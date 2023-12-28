@@ -11,8 +11,9 @@
     background-size: cover; /* This property ensures the image covers the entire body */
     background-position: center;
     background-attachment: fixed; /* Set the background position as fixed */
-    height: 100%;
+    min-height: 100px;
     margin: 0;
+    margin-bottom: 100px;
     padding: 0;
   }
   
