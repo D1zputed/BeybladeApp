@@ -82,3 +82,26 @@ class AddressDeleteView(DeleteView):
     model = CurAddress
     template_name = 'address_del.html'
     success_url = reverse_lazy('address-list')
+    
+class CollectionListView(ListView):
+    model = Collection
+    context_object_name = 'collections'
+    template_name = 'collections.html'
+    paginate_by = 5
+    
+class CollectionCreateView(CreateView):
+    model = Collection
+    form_class = CollectionForm
+    template_name = 'collection_add.html'
+    success_url = reverse_lazy('collection-list')
+    
+class CollectionUpdateView(UpdateView):
+    model = Collection
+    form_class = CollectionForm
+    template_name = 'collection_edit.html'
+    success_url = reverse_lazy('collection-list')
+    
+class CollectionDeleteView(DeleteView):
+    model = Collection
+    template_name = 'collection_del.html'
+    success_url = reverse_lazy('collection-list')

@@ -33,4 +33,8 @@ urlpatterns = [
     path('address_list/add', AddressCreateView.as_view(), name='address-add'),
     path('address_list/<pk>', AddressUpdateView.as_view(), name='address-update'),
     path('address_list/<pk>/delete', AddressDeleteView.as_view(), name='address-delete'),
+    path('collection_list', CollectionListView.as_view(), name='collection-list'),
+    path('collection_list/add', CollectionCreateView.as_view(), name='collection-add'),
+    path('collection_list/<pk>', CollectionUpdateView.as_view(), name='collection-edit'),
+    path('collection_list/<pk>/delete', CollectionDeleteView.as_view(), name='collectionr-delete'),
 ]

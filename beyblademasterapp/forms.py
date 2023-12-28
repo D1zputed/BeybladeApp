@@ -14,7 +14,7 @@ class BaybladeForm(ModelForm):
         fields = "__all__"
         
 class CollectionForm(ModelForm):
-    collection_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
+    acquisition_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
     class Meta:
         model = Collection
         fields = "__all__"

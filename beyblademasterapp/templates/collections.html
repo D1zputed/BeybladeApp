@@ -10,15 +10,15 @@
                   <tr>
                     <th>Player Name</th>
                     <th>Beyblade</th>
-                    <th>Collection Date</th>
+                    <th>Acquisition Date</th>
                     <th>Action</th>
                   </tr>
                   {% for collection in collections %}
                   <!--ASH-->
                   <tr>
-                    <td>{{ collection.trainer }}</td>
-                    <td>{{ collection.card }}</td>
-                    <td>{{ collection.collection_date }}</td>
+                    <td>{{ collection.player }}</td>
+                    <td>{{ collection.beyblade }}</td>
+                    <td>{{ collection.acquisition_date }}</td>
                     <td>
                       <a href="collection_list/{{ collection.id }}" >Edit</a> |
                       <a href="collection_list/{{ collection.id }}/delete" >Delete</a>
