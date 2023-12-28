@@ -1,0 +1,43 @@
+{% extends  "base.html" %}
+{% load static %}
+
+    <!--CONTENT-->
+      {% block content %}
+        <button><a href="{% url "address-add" %}" class="btn btn-success btn-lg">Add New Address</a></button><br>
+        <section class="trainers-container">
+            <table class="styled-table">
+                <tbody>
+                  <tr>
+                    <th>House No</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>Province</th>
+                    <th>Country</th>
+                    <th>Actions</th>
+                  </tr>
+                  {% for address in addresses%}
+                  <!--ASH-->
+                  <tr>
+                    <td>{{ address.houseNo }}</td>
+                    <td>{{ address.street }}</td>
+                    <td>{{ address.city }}</td>
+                    <td>{{ address.province }}</td>
+                    <td>{{ address.country }}</td>
+                    <td>
+                      <a href="address_list/{{ address.id }}" >Edit</a> |
+                      <a href="address_list/{{ address.id }}/delete" >Delete</a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                  
+                </tbody>
+            </table>
+        </section>
+          <div>
+            {% include 'includes/pagination.html' %}
+          </div>
+      {% endblock %}
+  </body>
+
+  {% include 'includes/footer.html' %}
+</html>

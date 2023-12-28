@@ -29,4 +29,8 @@ urlpatterns = [
     path('mentor_list/add', MentorCreateView.as_view(), name='mentor-add'),
     path('mentor_list/<pk>', MentorUpdateView.as_view(), name='mentor-update'),
     path('mentor_list/<pk>/delete', MentorDeleteView.as_view(), name='mentor-delete'),
+    path('address_list', AddressListView.as_view(), name='address-list'),
+    path('address_list/add', AddressCreateView.as_view(), name='address-add'),
+    path('address_list/<pk>', AddressUpdateView.as_view(), name='address-update'),
+    path('address_list/<pk>/delete', AddressDeleteView.as_view(), name='address-delete'),
 ]

@@ -24,3 +24,8 @@ class MentorForm(ModelForm):
     class Meta:
         model = Mentor
         fields = "__all__"
+        
+class AddressForm(ModelForm):
+    class Meta:
+        model = CurAddress
+        fields = "__all__"

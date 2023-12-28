@@ -60,3 +60,25 @@ class MentorDeleteView(DeleteView):
     template_name = 'mentor_del.html'
     success_url = reverse_lazy('mentor-list')
     
+class AddressListView(ListView):
+    model = CurAddress
+    context_object_name = 'addresses'
+    template_name = 'address.html'
+    paginate_by = 3
+
+class AddressCreateView(CreateView):
+    model = CurAddress
+    form_class = AddressForm
+    template_name = 'address_add.html'
+    success_url = reverse_lazy('address-list')
+
+class AddressUpdateView(UpdateView):
+    model = CurAddress
+    form_class = AddressForm
+    template_name = 'address_edit.html'
+    success_url = reverse_lazy('address-list')
+    
+class AddressDeleteView(DeleteView):
+    model = CurAddress
+    template_name = 'address_del.html'
+    success_url = reverse_lazy('address-list')
