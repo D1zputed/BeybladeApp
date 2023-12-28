@@ -19,7 +19,7 @@
       <a href="{% url 'home' %}" class="btn" id="active"> Home </a>
       <a href="{% url 'player-list' %}" class="btn"> Player </a>
       <a href="#" class="btn"> Beyblade </a>
-      <a href="#" class="btn"> Mentor </a>
+      <a href="{% url 'mentor-list' %}" class="btn"> Mentor </a>
       <a href="#" class="btn"> Collection </a>
       <a href="#" class="btn"> Addresses </a>
     </section>
@@ -33,6 +33,8 @@
 
 
 
-    {% include 'includes/footer.html' %}
+
   </body>
+  
+  {% include 'includes/footer.html' %}
 </html>

@@ -18,7 +18,7 @@ class PlayerListView(ListView):
     model = Player
     context_object_name = 'players'
     template_name = 'players.html'
-    paginate_by = 5
+    paginate_by = 3
 
 class PlayerCreateView(CreateView):
     model = Player
@@ -32,7 +32,31 @@ class PlayerUpdateView(UpdateView):
     template_name = 'player_edit.html'
     success_url = reverse_lazy('player-list')
     
-class PlayererDeleteView(DeleteView):
+class PlayerDeleteView(DeleteView):
     model = Player
     template_name = 'player_del.html'
     success_url = reverse_lazy('player-list')
+    
+class MentorListView(ListView):
+    model = Mentor
+    context_object_name = 'mentors'
+    template_name = 'mentors.html'
+    paginate_by = 3
+
+class MentorCreateView(CreateView):
+    model = Mentor
+    form_class = MentorForm
+    template_name = 'mentor_add.html'
+    success_url = reverse_lazy('mentor-list')
+
+class MentorUpdateView(UpdateView):
+    model = Mentor
+    form_class = MentorForm
+    template_name = 'mentor_edit.html'
+    success_url = reverse_lazy('mentor-list')
+    
+class MentorDeleteView(DeleteView):
+    model = Mentor
+    template_name = 'mentor_del.html'
+    success_url = reverse_lazy('mentor-list')
+    

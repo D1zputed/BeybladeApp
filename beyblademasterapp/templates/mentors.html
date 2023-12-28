@@ -3,7 +3,7 @@
 
     <!--CONTENT-->
       {% block content %}
-        <button><a href="{% url "player-add" %}" class="btn btn-success btn-lg">Add New Player</a></button><br>
+        <button><a href="{% url "mentor-add" %}" class="btn btn-success btn-lg">Add New Mentor</a></button><br>
         <section class="trainers-container">
             <table class="styled-table">
                 <tbody>
@@ -15,23 +15,21 @@
                     <th>Home Country</th>
                     <th>Current Residence</th>
                     <th>Email</th>
-                    <th>Mentor</th>
                     <th>Actions</th>
                   </tr>
-                  {% for player in players%}
+                  {% for mentor in mentors%}
                   <!--ASH-->
                   <tr>
-                    <td>{{ player.firstName }}</td>
-                    <td>{{ player.lastName }}</td>
-                    <td>{{ player.birthdate }}</td>
-                    <td>{{ player.homeTown }}</td>
-                    <td>{{ player.homeCountry }}</td>
-                    <td>{{ player.curAddr }}</td>
-                    <td>{{ player.email }}</td>
-                    <td>{{ player.mentor }}</td>
+                    <td>{{ mentor.firstName }}</td>
+                    <td>{{ mentor.lastName }}</td>
+                    <td>{{ mentor.birthdate }}</td>
+                    <td>{{ mentor.homeTown }}</td>
+                    <td>{{ mentor.homeCountry }}</td>
+                    <td>{{ mentor.curAddr }}</td>
+                    <td>{{ mentor.email }}</td>
                     <td>
-                      <a href="player_list/{{ player.id }}" >Edit</a> |
-                      <a href="player_list/{{ player.id }}/delete" >Delete</a>
+                      <a href="mentor_list/{{ mentor.id }}" >Edit</a> |
+                      <a href="mentor_list/{{ mentor.id }}/delete" >Delete</a>
                     </td>
                   </tr>
                   {% endfor %}
@@ -43,7 +41,6 @@
             {% include 'includes/pagination.html' %}
           </div>
       {% endblock %}
-    
   </body>
 
   {% include 'includes/footer.html' %}

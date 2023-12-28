@@ -23,5 +23,10 @@ urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path('player_list', PlayerListView.as_view(), name='player-list'),
     path('player_list/add', PlayerCreateView.as_view(), name='player-add'),
-    path('player_list/<pk>', PlayerUpdateView.as_view(), name='player-update')
+    path('player_list/<pk>', PlayerUpdateView.as_view(), name='player-update'),
+    path('player_list/<pk>/delete', PlayerDeleteView.as_view(), name='player-delete'),
+    path('mentor_list', MentorListView.as_view(), name='mentor-list'),
+    path('mentor_list/add', MentorCreateView.as_view(), name='mentor-add'),
+    path('mentor_list/<pk>', MentorUpdateView.as_view(), name='mentor-update'),
+    path('mentor_list/<pk>/delete', MentorDeleteView.as_view(), name='mentor-delete'),
 ]

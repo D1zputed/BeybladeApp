@@ -18,3 +18,9 @@ class CollectionForm(ModelForm):
     class Meta:
         model = Collection
         fields = "__all__"
+        
+class MentorForm(ModelForm):
+    birthdate = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
+    class Meta:
+        model = Mentor
+        fields = "__all__"
