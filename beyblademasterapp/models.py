@@ -83,6 +83,9 @@ class Beyblade(BaseModel):
     spinDirection = models.CharField(
         max_length=100, null=True, blank=True, choices=SPINDIRECTION
     )
+    type = models.CharField(
+        max_length=100, null=True, blank=True, choices=TYPE
+    )
     weightGrams = models.FloatField(null=True, blank=True)
     description = models.CharField(max_length=250, null=True, blank=True)
     release_date = models.DateField(null=True,blank=True)
