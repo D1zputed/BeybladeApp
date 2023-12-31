@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="cards-container">
+    <!-- Display Pokemon Cards -->
+    <button type="button"><a href="{% url 'beyblade-add' %}" class="btn btn-outline-primary">Add New Beyblade</a></button><br>
+    {% for beyblade in beyblades %}
+        <div class="card-box">
+            <div class="card">
+                <div class="card-type">
+                    <div class="card-image">
+                        <img src="{{ beyblade.image }}" alt="{{ beyblade.faceBolt }} Image">
+                    </div>
+                    <div class="card-name">
+                        <h2 class="sbs">{{ beyblade.fusionWheel}}</h2>
+                        <h2 class="sbs">{{ beyblade.faceBolt}}</h2>
+                        <hr />
+                    </div>
+                    <table class="card-stats">
+                        <tbody>
+                            <tr>
+                                <th>Spin Direction:</th>
+                                <td>{{ beyblade.spinDirection }}</td>
+                            </tr>
+                            <tr>
+                                <th>Fusion Wheel:</th>
+                                <td>{{ beyblade.fusionWheel }}</td>
+                            </tr>
+                            <tr>
+                                <th>Weight(g):</th>
+                                <td>{{ beyblade.weightGrams }}</td>
+                            </tr>
+                            <tr>
+                                <th>Description:</th>
+                                <td>{{ beyblade.description }}</td>
+                            </tr>
+                            <tr>
+                                <th>Release Date:</th>
+                                <td>{{ beyblade.release_date }}</td>
+                            </tr>
+                            <tr>
+                                <th>Abilities:</th>
+                                <td>{{ beyblade.abilities }}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="beyblade_list/{{ beyblade.id }}" >Edit</a> |
+                                    <a href="beyblade_list/{{ beyblade.id }}/delete" >Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <hr />
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </section>
+{% endblock %}

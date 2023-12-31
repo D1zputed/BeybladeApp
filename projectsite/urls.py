@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from beyblademasterapp.views import *
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,5 +38,11 @@ urlpatterns = [
     path('collection_list', CollectionListView.as_view(), name='collection-list'),
     path('collection_list/add', CollectionCreateView.as_view(), name='collection-add'),
     path('collection_list/<pk>', CollectionUpdateView.as_view(), name='collection-edit'),
-    path('collection_list/<pk>/delete', CollectionDeleteView.as_view(), name='collectionr-delete'),
+    path('collection_list/<pk>/delete', CollectionDeleteView.as_view(), name='collection-delete'),
+    path('beyblade_list', BeybladeListView.as_view(), name='beyblade-list'),
+    path('beyblade_list/add', BeybladeCreateView.as_view(), name='beyblade-add'),
+    path('beyblade_list/<pk>', BeybladeUpdateView.as_view(), name='beyblade-edit'),
+    path('beyblade_list/<pk>/delete', BeybladeDeleteView.as_view(), name='beyblade-delete'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

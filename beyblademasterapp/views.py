@@ -105,3 +105,25 @@ class CollectionDeleteView(DeleteView):
     model = Collection
     template_name = 'collection_del.html'
     success_url = reverse_lazy('collection-list')
+    
+class BeybladeListView(ListView):
+    model = Beyblade
+    context_object_name = 'beyblades'
+    template_name = "beyblades.html"
+        
+class BeybladeCreateView(CreateView):
+    model = Beyblade
+    form_class = BeybladeForm
+    template_name = 'beyblade_add.html'
+    success_url = reverse_lazy('beyblade-list')
+    
+class BeybladeUpdateView(UpdateView):
+    model = Beyblade
+    form_class = BeybladeForm
+    template_name = 'beyblade_edit.html'
+    success_url = reverse_lazy('beyblade-list')
+    
+class BeybladeDeleteView(DeleteView):
+    model = Beyblade
+    template_name = 'beyblade_del.html'
+    success_url = reverse_lazy('beyblade-list')

@@ -7,7 +7,7 @@ class PlayerForm(ModelForm):
         model = Player
         fields = "__all__"
         
-class BaybladeForm(ModelForm):
+class BeybladeForm(ModelForm):
     release_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
     class Meta:
         model = Beyblade
